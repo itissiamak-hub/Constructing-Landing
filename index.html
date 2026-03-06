@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parkook — Websites for Construction & Renovation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true">
+    <div class="bg-layer bg-construction" id="bgConstruction"></div>
+    <div class="bg-layer bg-progress" id="bgProgress"></div>
+    <div class="bg-layer bg-completed" id="bgCompleted"></div>
+    <div class="bg-overlay"></div>
+  </div>
+  <div class="page-content">
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <span class="logo">Parkook</span>
+        <span class="motto" data-i18n="motto">YOU BUILD, WE PRESENT</span>
+      </a>
+      <nav class="lang-nav">
+        <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-label="German">DE</button>
+        <button type="button" class="lang-btn" data-lang="fa" aria-label="Persian">فا</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="deco-icon deco-crane" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 42V18l12-8 8 4 4 8v20M20 10v32M28 14v28M12 18h24M16 26h4M28 26h4"/></svg>
+      </span>
+      <span class="deco-icon deco-building" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4L6 14v30h12V22h12v22h12V14L24 4z"/><path d="M24 4v10M6 14h36M18 22v20M30 22v20"/></svg>
+      </span>
+      <div class="container">
+        <h1 class="hero-title" id="heroTitle" data-i18n="hero.title">We build websites for your construction and renovation business</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">You focus on building and renovating. We handle your online presence—professional, simple, and effective.</p>
+        <div class="hero-buttons">
+          <a href="project-demo.html" class="cta-button cta-button-secondary" target="_blank" rel="noopener" data-i18n="hero.projects">Projects</a>
+          <a href="#request" class="cta-button" data-i18n="hero.cta">Get your website</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <span class="deco-icon deco-hammer" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20 8l-6 6 14 14 6-6-14-14z"/><path d="M14 14l-4 12 12 4 4-12-12-4z"/><path d="M28 20l12 12"/></svg>
+      </span>
+      <div class="container">
+        <h2 class="section-title" data-i18n="about.title">About me</h2>
+        <div class="about-card">
+          <div class="about-avatar">JD</div>
+          <div class="about-content">
+            <p class="about-name">John Davis</p>
+            <p class="about-email"><a href="mailto:john.davis@buildyoursite.example">john.davis@buildyoursite.example</a></p>
+            <p class="about-text" data-i18n="about.text">I design and build websites tailored for construction companies, renovators, and tradespeople—so you can win more clients online without dealing with tech.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="request" id="request">
+      <span class="deco-icon deco-screwdriver" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6l-8 8 14 14 8-8-14-14z"/><path d="M10 14l-4 4 6 6 4-4-6-6z"/><path d="M26 20l14 14-2 2-16-16 2-2z"/></svg>
+      </span>
+      <span class="deco-icon deco-window" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="8" width="36" height="32" rx="2"/><path d="M6 20h36M24 8v32M6 28h36"/></svg>
+      </span>
+      <div class="container">
+        <h2 class="section-title" data-i18n="request.title">Send us your request</h2>
+        <p class="request-intro" data-i18n="request.intro">Tell us about your business. We’ll get back to you with a proposal for your new website.</p>
+        <form class="request-form" id="requestForm" novalidate>
+          <div class="form-row">
+            <label for="fullname">
+              <span class="label-text" data-i18n="form.fullname">Full name</span>
+              <span class="required">*</span>
+            </label>
+            <input type="text" id="fullname" name="fullname" required autocomplete="name" placeholder="">
+          </div>
+          <div class="form-row">
+            <label for="company">
+              <span class="label-text" data-i18n="form.company">Registered business or company name</span>
+              <span class="required">*</span>
+            </label>
+            <input type="text" id="company" name="company" required autocomplete="organization" placeholder="">
+          </div>
+          <div class="form-row">
+            <label for="phoneNumber">
+              <span class="label-text" data-i18n="form.phone">Phone number</span>
+              <span class="required">*</span>
+            </label>
+            <div class="phone-input-group">
+              <span class="phone-country-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+              <select id="phoneCountry" name="phoneCountry" class="phone-country" required aria-label="Country code">
+                <option value="" data-i18n="form.phone.country">Country</option>
+              </select>
+              <input type="tel" id="phoneNumber" name="phoneNumber" class="phone-number" inputmode="numeric" maxlength="10" required autocomplete="tel-national" placeholder="" aria-label="10-digit number">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="email">
+              <span class="label-text" data-i18n="form.email">Email</span>
+              <span class="required">*</span>
+            </label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="">
+          </div>
+          <div class="form-row form-row-full">
+            <label for="inquiry">
+              <span class="label-text" data-i18n="form.inquiry">Describe your inquiry</span>
+              <span class="required">*</span>
+            </label>
+            <textarea id="inquiry" name="inquiry" rows="5" required placeholder=""></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="submit-btn" data-i18n="form.submit">Send request</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="deco-icon deco-building-footer" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4L6 14v30h12V22h12v22h12V14L24 4z"/></svg>
+    </span>
+    <div class="container">
+      <p class="footer-text" data-i18n="footer">© Parkook — Websites for construction and renovation businesses.</p>
+    </div>
+  </footer>
+  </div>
+
+  <div class="modal-overlay" id="thankYouModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal">
+      <div class="modal-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24l10 10 18-22"/></svg>
+      </div>
+      <h2 class="modal-title" id="modalTitle">Thank you!</h2>
+      <p class="modal-message" id="modalMessage">We have received your request. We will contact you soon.</p>
+      <button type="button" class="modal-close" id="modalClose" data-i18n="modal.close">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
