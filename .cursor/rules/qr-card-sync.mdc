@@ -1,0 +1,19 @@
+---
+description: Keep qr-card.html in sync with demo and link changes
+globs: project-demo.html, index.html, qr-card.html
+alwaysApply: false
+---
+
+# QR card file must stay in sync
+
+When you change anything that affects what customers see via the demo or the QR code:
+
+1. **Also update `qr-card.html`** in the same change (or in an immediate follow-up).
+
+Apply updates to the QR card when you:
+- Change the **demo URL** (e.g. project-demo.html path or domain) → update the QR image `src` and the link `href` in qr-card.html.
+- Change **branding or tagline** that appears on the QR card (e.g. "YOU BUILD, WE PRESENT") → update the `.qr-title` text in qr-card.html.
+- Change **footer or credit** text (e.g. "all right reserved to Parkook.com") → update the `.qr-footer` block in qr-card.html.
+- Add or change a **landing link** (e.g. index.html or parkook.com) → update the footer link in qr-card.html if it points there.
+
+Keep the QR card’s link and QR image URL identical to the live demo URL (currently `https://itissiamak-hub.github.io/Constructing-Landing/project-demo.html`).
