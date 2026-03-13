@@ -71,7 +71,16 @@
       aspect-ratio: 4/3;
       background: #e8e4dc;
     }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
     .gallery-caption { padding: 0.75rem; background: var(--white); font-size: 0.9rem; color: var(--muted); text-align: center; border: 1px solid var(--border); border-top: none; border-radius: 0 0 12px 12px; }
 
     .process-list { max-width: 640px; margin: 0 auto; }
