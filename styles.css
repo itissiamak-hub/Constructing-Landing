@@ -388,10 +388,10 @@ body.rtl .deco-window { right: auto; left: 1.5rem; }
 
 @media (max-width: 640px) {
   .hero-title {
-    font-size: 1.45rem;
+    font-size: 1.3rem;
     line-height: 1.25;
-    hyphens: auto;
-    word-break: normal;
+    hyphens: none;
+    word-break: keep-all;
   }
   .hero-subtitle {
     font-size: 0.98rem;
