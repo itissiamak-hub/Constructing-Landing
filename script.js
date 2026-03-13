@@ -112,7 +112,18 @@ function applyLanguage(lang) {
     if (key && t[key]) el.textContent = t[key];
   });
 
-  animateHeroLetters();
+  // On small screens, use a simple heading without per-letter animation
+  const heroEl = document.getElementById('heroTitle');
+  const heroText = t['hero.title'];
+  if (heroEl && heroText) {
+    if (window.innerWidth <= 640) {
+      heroEl.textContent = heroText.replace(/\s*\n\s*/g, ' ');
+    } else {
+      animateHeroLetters();
+    }
+  } else {
+    animateHeroLetters();
+  }
 
   const placeholders = t.placeholder;
   if (placeholders) {
