@@ -386,12 +386,24 @@ body.rtl .deco-window { right: auto; left: 1.5rem; }
   margin-right: 3ch;
 }
 
+@keyframes heroTitleMobileIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 640px) {
   .hero-title {
     font-size: 1.3rem;
     line-height: 1.25;
     hyphens: none;
     word-break: keep-all;
+    animation: heroTitleMobileIn 0.6s ease-out;
   }
   .hero-subtitle {
     font-size: 0.98rem;
