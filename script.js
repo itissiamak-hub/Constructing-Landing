@@ -3,6 +3,7 @@ const translations = {
     'hero.title': 'We build websites for your \nconstruction and renovation business',
     'hero.subtitle': 'You focus on building and renovating. We handle your online presence—professional, simple, and effective.',
     'hero.projects': 'Projects',
+    'hero.quote': 'Get a Free Quote',
     'hero.cta': 'Get your website',
     'about.title': 'About me',
     'about.text': 'I design and build websites tailored for construction companies, renovators, and tradespeople—so you can win more clients online without dealing with tech.',
@@ -36,6 +37,7 @@ const translations = {
     'hero.title': 'Wir erstellen Websites für Ihr \nBau- und Renovierungsgeschäft',
     'hero.subtitle': 'Sie kümmern sich um Bauen und Renovieren. Wir übernehmen Ihren Auftritt im Internet—professionell, einfach und wirksam.',
     'hero.projects': 'Projekte',
+    'hero.quote': 'Kostenloses Angebot',
     'hero.cta': 'Website anfragen',
     'about.title': 'Über mich',
     'about.text': 'Ich gestalte und entwickle Websites für Baufirmen, Renovierer und Handwerker—damit Sie online mehr Kunden gewinnen, ohne sich mit Technik herumschlagen zu müssen.',
@@ -69,6 +71,7 @@ const translations = {
     'hero.title': 'ما وب‌سایت حرفه‌ای برای \nکسب‌وکار ساخت و بازسازی شما می‌سازیم',
     'hero.subtitle': 'شما روی ساخت و بازسازی تمرکز کنید. ما حضور آنلاین شما را حرفه‌ای، ساده و مؤثر مدیریت می‌کنیم.',
     'hero.projects': 'پروژه‌ها',
+    'hero.quote': 'دریافت پیشنهاد رایگان',
     'hero.cta': 'درخواست وب‌سایت',
     'about.title': 'درباره من',
     'about.text': 'من وب‌سایت‌هایی مخصوص شرکت‌های ساختمانی، بازسازی و صنعتگران طراحی و می‌سازم—تا بدون درگیر شدن با فناوری، مشتریان بیشتری آنلاین جذب کنید.',
@@ -583,11 +586,30 @@ function updateBackground() {
 
 function onScroll() {
   requestAnimationFrame(updateBackground);
+  var header = document.querySelector('.header');
+  if (header) {
+    header.classList.toggle('header--scrolled', window.scrollY > 20);
+  }
 }
 
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', onScroll);
+onScroll();
 updateBackground();
+
+(function scrollReveal() {
+  var els = document.querySelectorAll('.scroll-reveal');
+  if (!els.length) return;
+  var io = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    },
+    { rootMargin: '0px 0px -8% 0px', threshold: 0.1 }
+  );
+  els.forEach(function (el) { io.observe(el); });
+})();
 
 (function removeInvalidOnInput() {
   var form = document.getElementById('requestForm');
